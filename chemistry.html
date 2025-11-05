@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chemistry Learning Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  
+  <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-blue-600">ChemistryHub</h1>
+      <ul class="flex space-x-6 text-sm font-semibold">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#topics" class="hover:text-blue-500">Topics</a></li>
+        <li><a href="#resources" class="hover:text-blue-500">Resources</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-4">
+    <h2 class="text-5xl font-bold mb-4">Welcome to <span class="text-yellow-300">ChemistryHub</span></h2>
+    <p class="text-lg max-w-2xl mb-6">Discover the amazing world of chemistry — atoms, reactions, and everything in between. Learn, explore, and experiment safely!</p>
+    <a href="#topics" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">Start Learning</a>
+  </section>
+
+ 
+  <section id="topics" class="max-w-6xl mx-auto py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 text-blue-600">Core Chemistry Topics</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div class="bg-white rounded-xl shadow-md p-6 hover:-translate-y-2 transition text-center">
+        <img src="https://via.placeholder.com/150" alt="Atoms" class="mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600">Atomic Structure</h3>
+        <p class="text-gray-600">Understand the building blocks of matter — protons, neutrons, and electrons — and how they form everything around us.</p>
+      </div>
+      
+      <div class="bg-white rounded-xl shadow-md p-6 hover:-translate-y-2 transition text-center">
+        <img src="https://via.placeholder.com/150" alt="Reactions" class="mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600">Chemical Reactions</h3>
+        <p class="text-gray-600">Learn how substances change and combine in amazing ways — from color changes to explosions!</p>
+      </div>
+     
+      <div class="bg-white rounded-xl shadow-md p-6 hover:-translate-y-2 transition text-center">
+        <img src="https://via.placeholder.com/150" alt="Lab Safety" class="mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600">Lab Safety</h3>
+        <p class="text-gray-600">Stay safe while experimenting! Discover essential safety rules and proper handling of materials.</p>
+      </div>
+    </div>
+  </section>
+
+    <section id="resources" class="bg-blue-50 py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 text-blue-600">Learning Resources</h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-4">📘 Study Guides</h3>
+        <p class="text-gray-700 mb-4">Access notes, diagrams, and explanations to help you master chemistry topics easily.</p>
+        <a href="#" class="text-blue-600 font-semibold hover:underline">Download PDFs →</a>
+        <a href="study-lines.html" class="inline-block bg-purple-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-purple-500 transition">Enter →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-4">🎥 Video Lessons</h3>
+        <p class="text-gray-700 mb-4">Watch short, engaging videos that explain concepts like acids, bases, bonding, and more.</p>
+        <a href="#" class="text-blue-600 font-semibold hover:underline">Watch Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="max-w-4xl mx-auto py-20 px-6 text-center">
+    <h2 class="text-4xl font-bold mb-8 text-blue-600">Contact the Team</h2>
+    <p class="mb-6 text-lg text-gray-700">Have a question about chemistry or want to share your experiments? Get in touch with us!</p>
+    <form class="space-y-5">
+      <input type="text" placeholder="Your Name" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <input type="email" placeholder="Your Email" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <textarea placeholder="Your Message" rows="4" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition">Send Message</button>
+    </form>
+  </section>
+
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+    &copy; <span id="year"></span> ChemistryHub • Designed with 💙 by Daniella
+  </footer>
+
+    <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+<a href="study-lines.html" class="inline-block bg-purple-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-purple-500 transition">Enter →</a>
+
+ <div class="text-center mt-10">
+      <a href="educationalhub.html" class="bg-yellow-400 text-white px-6 py-2 rounded-xl shadow-md hover:bg-yellow-500 transition">← Back to Educational Hub</a>
+    </div>
+
+</body>
+</html>

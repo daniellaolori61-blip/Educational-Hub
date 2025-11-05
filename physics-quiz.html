@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Quiz | Educational Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-b from-purple-100 via-pink-100 to-peachpuff text-gray-800 font-sans">
+
+  <header class="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white text-center p-8 shadow-lg">
+    <h1 class="text-4xl font-bold drop-shadow-lg">Physics Hub Quiz ⚡</h1>
+    <p class="mt-2 text-lg italic">Test your knowledge and see how bright you shine! ✨</p>
+  </header>
+
+  <main class="max-w-3xl mx-auto p-8">
+    <div class="bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-pink-200">
+      <h2 class="text-3xl font-semibold text-purple-600 mb-6 text-center">Quiz Time!</h2>
+
+      <form id="quizForm" class="space-y-6 text-lg">
+        <div>
+          <p class="font-semibold">1️⃣ Which of the following is a form of energy?</p>
+          <label class="block mt-2"><input type="radio" name="q1" value="A"> Force</label>
+          <label class="block"><input type="radio" name="q1" value="B"> Light</label>
+          <label class="block"><input type="radio" name="q1" value="C"> Weight</label>
+        </div>
+
+        <div>
+          <p class="font-semibold">2️⃣ What unit is used to measure force?</p>
+          <label class="block mt-2"><input type="radio" name="q2" value="A"> Joules</label>
+          <label class="block"><input type="radio" name="q2" value="B"> Meters</label>
+          <label class="block"><input type="radio" name="q2" value="C"> Newtons</label>
+        </div>
+
+        <div>
+          <p class="font-semibold">3️⃣ Which of these is an example of a simple machine?</p>
+          <label class="block mt-2"><input type="radio" name="q3" value="A"> Television</label>
+          <label class="block"><input type="radio" name="q3" value="B"> Lever</label>
+          <label class="block"><input type="radio" name="q3" value="C"> Computer</label>
+        </div>
+
+        <div>
+          <p class="font-semibold">4️⃣ Light travels in ______.</p>
+          <label class="block mt-2"><input type="radio" name="q4" value="A"> Circles</label>
+          <label class="block"><input type="radio" name="q4" value="B"> Straight lines</label>
+          <label class="block"><input type="radio" name="q4" value="C"> Zig-zags</label>
+        </div>
+
+        <div>
+          <p class="font-semibold">5️⃣ The ability to do work is called ______.</p>
+          <label class="block mt-2"><input type="radio" name="q5" value="A"> Energy</label>
+          <label class="block"><input type="radio" name="q5" value="B"> Motion</label>
+          <label class="block"><input type="radio" name="q5" value="C"> Power</label>
+        </div>
+
+        <div class="text-center mt-8">
+          <button type="button" onclick="checkQuiz()" class="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white px-8 py-3 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition transform duration-200">
+            Submit Answers ✨
+          </button>
+        </div>
+
+        <p id="result" class="mt-6 text-center font-semibold text-lg"></p>
+      </form>
+    </div>
+
+    <div class="text-center mt-10 space-x-4">
+      <a href="physics study guide.html" class="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-300 text-white px-6 py-2 rounded-2xl shadow-md hover:shadow-lg transition">← Back to Study Guide</a>
+      <a href="physics hub.html" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-2xl shadow-md hover:bg-gray-300 transition">🏠 Home</a>
+    </div>
+  </main>
+
+  <footer class="text-center text-sm text-gray-600 mt-12 mb-4">
+    &copy; 2025 Educational Hub | Designed by <strong>Daniella</strong>
+  </footer>
+
+  <script>
+    function checkQuiz() {
+      const answers = { q1: "B", q2: "C", q3: "B", q4: "B", q5: "A" };
+      let score = 0;
+      for (let i = 1; i <= 5; i++) {
+        const question = document.querySelector(`input[name="q${i}"]:checked`);
+        if (question && question.value === answers[`q${i}`]) score++;
+      }
+      const result = document.getElementById('result');
+      if (score === 5) {
+        result.textContent = `🌟 Amazing! You got ${score}/5!`;
+        result.className = "text-green-600 text-center font-semibold text-lg";
+      } else if (score >= 3) {
+        result.textContent = `💡 Great job! You scored ${score}/5! Keep going!`;
+        result.className = "text-blue-600 text-center font-semibold text-lg";
+      } else {
+        result.textContent = `🌀 You scored ${score}/5. Review your notes and try again!`;
+        result.className = "text-red-600 text-center font-semibold text-lg";
+      }
+    }
+  </script>
+</body>
+</html>

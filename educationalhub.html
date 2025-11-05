@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Educational Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f8fafc; color: #1e293b; scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="px-6 md:px-20 py-16">
+
+  <!-- Header -->
+  <header class="text-center mb-16">
+    <h1 class="text-5xl font-bold text-blue-600 mb-4">🎓 Educational Hub</h1>
+    <p class="text-lg text-gray-600">Explore, learn, and test your knowledge across multiple subjects!</p>
+  </header>
+
+ 
+  <section class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    
+    
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-2">🧮 Mathematics Hub</h2>
+      <p class="text-gray-700 mb-4">Master numbers, equations, and problem-solving skills.</p>
+      <a href="maths hub.html" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-500 transition">Enter →</a>
+    </div>
+
+    
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold text-green-600 mb-2">🧪 Chemistry Hub</h2>
+      <p class="text-gray-700 mb-4">Dive into elements, compounds, and reactions that shape our world.</p>
+      <a href="chemistry.html" class="inline-block bg-green-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-500 transition">Enter →</a>
+    </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold text-red-600 mb-2">📚 English Hub</h2>
+      <p class="text-gray-700 mb-4">Improve your grammar, vocabulary, and writing confidence.</p>
+      <a href="english.html" class="inline-block bg-red-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-red-500 transition">Enter →</a>
+    </div>
+
+    
+    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition">
+      <h2 class="text-2xl font-semibold text-purple-600 mb-2">⚙️ Physics Hub</h2>
+      <p class="text-gray-700 mb-4">Understand motion, energy, and the forces behind our universe.</p>
+      <a href="physics.html" class="inline-block bg-purple-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-purple-500 transition">Enter →</a>
+    </div>
+
+    
+
+  </section>
+
+  
+  <footer class="text-center mt-20 text-gray-500">
+    &copy; <span id="year"></span> Educational Hub | Created by Daniella 💙
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

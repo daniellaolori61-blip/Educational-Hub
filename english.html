@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Hub | Educational Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-yellow-50 to-yellow-100 text-gray-800 font-sans">
+
+  
+  <header class="bg-yellow-400 text-white text-center p-6 shadow-lg">
+    <h1 class="text-4xl font-bold">English Hub</h1>
+    <p class="text-sm mt-2">Improve your grammar, comprehension, and writing with simple explanations and practice</p>
+  </header>
+
+  
+  <main class="max-w-5xl mx-auto p-8">
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-yellow-700 mb-3">Study Guide</h2>
+      <p class="text-gray-700 mb-4">Welcome to the English Hub! Here you’ll learn essential skills in grammar, reading, and writing that will strengthen your communication abilities.</p>
+
+      <div class="space-y-6">
+        
+        <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-yellow-500">
+          <h3 class="text-xl font-bold text-yellow-700 mb-2">Grammar Basics</h3>
+          <p class="text-gray-700">Grammar helps us form correct sentences. Focus on parts of speech like nouns, verbs, adjectives, and adverbs. Example:  
+            <em>"The bright sun shines beautifully."</em> — *‘Bright’* is an adjective, *‘shines’* is a verb, and *‘beautifully’* is an adverb.</p>
+        </div>
+
+        
+        <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-yellow-500">
+          <h3 class="text-xl font-bold text-yellow-700 mb-2">Reading Comprehension</h3>
+          <p class="text-gray-700">When reading a passage, take your time to understand the main idea, supporting details, and tone of the writer. Practice summarizing short paragraphs in your own words.</p>
+        </div>
+
+        
+        <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-yellow-500">
+          <h3 class="text-xl font-bold text-yellow-700 mb-2">Writing Skills</h3>
+          <p class="text-gray-700">Writing clearly requires structure. Begin with an introduction, explain your ideas in the middle, and end with a conclusion.  
+          Example: When writing an essay, plan your points before writing — it makes your work flow better!</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="mt-12 text-center">
+      <h2 class="text-2xl font-semibold text-yellow-700 mb-3">📝 Quick English Quiz</h2>
+      <p class="text-gray-600 mb-6">Test your understanding with a few short questions.</p>
+
+      <div id="quiz" class="bg-white p-6 rounded-2xl shadow-md max-w-lg mx-auto">
+        <div class="mb-4">
+          <p class="font-semibold">1. Which sentence is correct?</p>
+          <button class="quiz-btn mt-2 block w-full border border-yellow-300 rounded p-2 hover:bg-yellow-200" onclick="checkAnswer(1, this)">She go to school every day.</button>
+          <button class="quiz-btn mt-2 block w-full border border-yellow-300 rounded p-2 hover:bg-yellow-200" onclick="checkAnswer(2, this)">She goes to school every day.</button>
+        </div>
+
+        <div class="mb-4">
+          <p class="font-semibold">2. What is the plural of “child”?</p>
+          <button class="quiz-btn mt-2 block w-full border border-yellow-300 rounded p-2 hover:bg-yellow-200" onclick="checkAnswer(3, this)">Childs</button>
+          <button class="quiz-btn mt-2 block w-full border border-yellow-300 rounded p-2 hover:bg-yellow-200" onclick="checkAnswer(4, this)">Children</button>
+        </div>
+
+        <div class="mb-4">
+          <p class="font-semibold">3. Choose the correct adjective form:</p>
+          <button class="quiz-btn mt-2 block w-full border border-yellow-300 rounded p-2 hover:bg-yellow-200" onclick="checkAnswer(5, this)">More better</button>
+          <button class="quiz-btn mt-2 block w-full border border-yellow-300 rounded p-2 hover:bg-yellow-200" onclick="checkAnswer(6, this)">Better</button>
+        </div>
+
+        <p id="result" class="mt-4 font-semibold text-yellow-700"></p>
+      </div>
+    </section>
+
+   
+    <div class="text-center mt-10">
+      <a href="educationalhub.html" class="bg-yellow-400 text-white px-6 py-2 rounded-xl shadow-md hover:bg-yellow-500 transition">← Back to Educational Hub</a>
+    <a href="english-study guide.html" class="bg-yellow-300 text-white px-6 py-2 rounded-xl shadow-md hover:bg-yellow-400 transition">-></a>
+    </div>
+  </main>
+
+ 
+  <footer class="text-center text-sm text-gray-600 mt-10 mb-5">
+    &copy; 2025 Educational Hub | Designed by <strong>Daniella</strong>
+  </footer>
+
+  <script>
+    function checkAnswer(id, btn) {
+      const result = document.getElementById('result');
+      const correct = [2, 4, 6]; 
+      if (correct.includes(id)) {
+        result.textContent = "✅ Correct! Great job!";
+        result.classList.add("text-green-600");
+      } else {
+        result.textContent = "❌ Try again!";
+        result.classList.add("text-red-600");
+      }
+    }
+  </script>
+
+</body>
+</html>

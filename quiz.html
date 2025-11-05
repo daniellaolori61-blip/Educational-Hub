@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChemistryHub - Quiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f8fafc; color: #1e293b; scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="px-6 md:px-20 py-16">
+
+   <div class="text-center mb-10">
+    <a href="index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-500 transition">
+      ← Back to ChemistryHub
+    </a>
+  </div>
+
+    <header class="text-center mb-16">
+    <h1 class="text-5xl font-bold text-blue-600 mb-4">🧪 Chemistry Quiz</h1>
+    <p class="text-lg text-gray-600">Test your knowledge and see how well you know your chemistry basics!</p>
+  </header>
+
+    <div id="quiz-container" class="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-8">
+    <div id="question-container" class="text-center">
+      <h2 id="question" class="text-2xl font-semibold text-blue-600 mb-6"></h2>
+      <div id="answers" class="space-y-3"></div>
+    </div>
+
+    <div id="controls" class="text-center mt-10">
+      <button id="next-btn" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition hidden">
+        Next Question →
+      </button>
+    </div>
+
+    <div id="score-container" class="text-center mt-10 hidden">
+      <h3 id="score-text" class="text-2xl font-bold text-green-600 mb-4"></h3>
+      <button onclick="startQuiz()" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition">
+        Try Again
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-20 text-gray-500">
+    &copy; <span id="year"></span> ChemistryHub | Quiz by Daniella 💙
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const questions = [
+      {
+        question: "What is the smallest unit of matter?",
+        answers: ["Atom", "Molecule", "Electron", "Proton"],
+        correct: "Atom"
+      },
+      {
+        question: "Which subatomic particle has a negative charge?",
+        answers: ["Proton", "Neutron", "Electron", "Nucleus"],
+        correct: "Electron"
+      },
+      {
+        question: "Which gas do plants release during photosynthesis?",
+        answers: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+        correct: "Oxygen"
+      },
+      {
+        question: "What is the chemical formula for water?",
+        answers: ["CO₂", "H₂O", "O₂", "NaCl"],
+        correct: "H₂O"
+      },
+      {
+        question: "Which of these is a noble gas?",
+        answers: ["Helium", "Hydrogen", "Nitrogen", "Oxygen"],
+        correct: "Helium"
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    const questionElement = document.getElementById("question");
+    const answersContainer = document.getElementById("answers");
+    const nextBtn = document.getElementById("next-btn");
+    const scoreContainer = document.getElementById("score-container");
+    const scoreText = document.getElementById("score-text");
+
+    function startQuiz() {
+      currentQuestionIndex = 0;
+      score = 0;
+      scoreContainer.classList.add("hidden");
+      nextBtn.classList.add("hidden");
+      showQuestion();
+    }
+
+    function showQuestion() {
+      const q = questions[currentQuestionIndex];
+      questionElement.textContent = q.question;
+      answersContainer.innerHTML = "";
+      q.answers.forEach(answer => {
+        const btn = document.createElement("button");
+        btn.textContent = answer;
+        btn.className = "block w-full text-left bg-blue-50 hover:bg-blue-100 text-gray-700 px-4 py-2 rounded-lg";
+        btn.onclick = () => selectAnswer(btn, q.correct);
+        answersContainer.appendChild(btn);
+      });
+    }
+
+    function selectAnswer(button, correctAnswer) {
+      const allButtons = answersContainer.querySelectorAll("button");
+      allButtons.forEach(btn => btn.disabled = true);
+      if (button.textContent === correctAnswer) {
+        button.classList.add("bg-green-200");
+        score++;
+      } else {
+        button.classList.add("bg-red-200");
+      }
+      nextBtn.classList.remove("hidden");
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        nextBtn.classList.add("hidden");
+        showQuestion();
+      } else {
+        showScore();
+      }
+    });
+
+    function showScore() {
+      questionElement.textContent = "";
+      answersContainer.innerHTML = "";
+      nextBtn.classList.add("hidden");
+      scoreContainer.classList.remove("hidden");
+      scoreText.textContent = `You scored ${score} out of ${questions.length}!`;
+    }
+
+    startQuiz();
+  </script>
+
+</body>
+</html>

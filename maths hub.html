@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mathematics Hub | Educational Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style> body { font-family: 'Poppins', sans-serif; } </style>
+</head>
+<body class="bg-green-50 text-gray-800">
+
+ 
+  <div class="p-6 max-w-4xl mx-auto">
+    <a href="educationalhub.html" class="inline-block bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300">⬅ Back to Educational Hub</a>
+  <a href="math study-line.html" class="inline-block bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300">-></a>
+  </div>
+
+  
+  <header class="bg-green-700 text-white py-6 shadow-sm">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-3xl font-bold">Mathematics Hub</h1>
+      <p class="mt-1 text-sm opacity-90">Algebra • Graphs • Geometry — learn, practice, and test yourself</p>
+    </div>
+  </header>
+
+ 
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-6">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-2xl shadow border border-green-100 text-center">
+        <h2 class="text-xl font-semibold text-green-700 mb-2">📘 Study Lines</h2>
+        <p class="text-gray-700 mb-4">Clear, friendly explanations with examples for Algebra, Graphs and Geometry.</p>
+        <a href="math study-line.html" class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Open Study Guide →</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow border border-green-100 text-center">
+        <h2 class="text-xl font-semibold text-green-700 mb-2">🧩 Quiz</h2>
+        <p class="text-gray-700 mb-4">Practice problems with immediate feedback and explanations.</p>
+        <a href="math-quiz.html" class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Start the Quiz →</a>
+      </div>
+    </div>
+
+    <section class="bg-white p-6 rounded-2xl shadow border border-green-100">
+      <h3 class="text-lg font-semibold text-green-700 mb-2">Why study here?</h3>
+      <p class="text-gray-700">This hub is made for learners at your level — short lessons, helpful examples, and a friendly quiz to check understanding. When you feel ready, move on to other subjects from the Educational Hub.</p>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; <span id="year-math"></span> Educational Hub — Math • Designed by Daniella
+  </footer>
+
+  <script> document.getElementById('year-math').textContent = new Date().getFullYear(); </script>
+</body>
+</html>
